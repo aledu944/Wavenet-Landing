@@ -16,7 +16,7 @@ export function HeroSection() {
                     <div className="text-center lg:text-left max-w-3xl">
                         <p className="text-sm font-medium text-primary mb-4">BIENVENIDO A WAVENET</p>
 
-                        <h1 className="text-5xl uppercase md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight text-balance">
+                        <h1 className="text-4xl uppercase md:text-6xl lg:text-7xl font-extrabold text-foreground mb-6 lg:leading-18 text-balance">
                             Conectándote al mundo
                         </h1>
 
@@ -41,31 +41,33 @@ export function HeroSection() {
                         {/* Stats - Clean and minimal */}
                         <div className="grid grid-cols-3 gap-8 md:gap-16 pt-12 border-t border-border/50">
                             <div>
-                                <p className="text-3xl md:text-4xl font-bold text-primary">1 Gbps</p>
-                                <p className="text-sm text-foreground/60 mt-1">Velocidad máxima</p>
+                                <p className="text-3xl md:text-4xl font-bold text-primary">+100</p>
+                                <p className="text-sm text-foreground/60 mt-1">Clientes Satisfechos</p>
                             </div>
                             <div>
                                 <p className="text-3xl md:text-4xl font-bold text-secondary">99.9%</p>
                                 <p className="text-sm text-foreground/60 mt-1">Disponibilidad</p>
                             </div>
                             <div>
-                                <p className="text-3xl md:text-4xl font-bold text-accent">+50k</p>
+                                <p className="text-3xl md:text-4xl font-bold text-accent">100%</p>
                                 <p className="text-sm text-foreground/60 mt-1">Clientes felices</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Hero Image */}
-                    <div className="relative">
-                        <div className="relative bg-lienear-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-3xl p-8 md:p-12">
-                            <img
-                                src="/modern-fiber-optic-network-technology-professional.jpg"
-                                alt="Tecnología de fibra óptica Wavenet"
-                                className="w-full h-auto rounded-2xl shadow-2xl"
-                            />
+                    <div className="relative ">
+                        <div className="relative rounded-3xl md:p-12">
+                            <div className="relative bg-linear-to-br from-primary/50 via-secondary/70 to-accent/70 rounded-3xl p-2 overflow-hidden lg:max-w-max shadow-lg">
+                                <img
+                                    src="/images/wavenet-hero-section.jpg"
+                                    alt="Tecnología de fibra óptica Wavenet"
+                                    className="w-full h-auto rounded-2xl shadow-2xl"
+                                />
+                            </div>
 
                             {/* Floating Cards */}
-                            <div className="absolute -left-4 top-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
+                            <div className="absolute -left-4 top-5 lg:top-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
                                 <div className="flex items-center gap-3">
                                     <div className="p-2 bg-primary/10 rounded-lg">
                                         <Zap className="h-5 w-5 text-primary" />
@@ -77,7 +79,7 @@ export function HeroSection() {
                                 </div>
                             </div>
 
-                            <div className="absolute -right-4 bottom-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
+                            <div className="absolute -right-2 bottom-4 lg:-right-4 lg:bottom-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
                                 <div className="flex items-center gap-3">
                                     <div className="p-2 bg-accent/10 rounded-lg">
                                         <Shield className="h-5 w-5 text-accent" />

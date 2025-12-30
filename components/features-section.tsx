@@ -1,42 +1,55 @@
-import { Check } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react"
+import Link from "next/link"
+import { Button } from "./ui/button"
 
 const features = [
-    "Velocidad simétrica de subida y bajada",
-    "WiFi 6 de última generación incluido",
-    "Sin límites de datos",
-    "Instalación profesional en 48 horas",
-    "Sin contratos de permanencia",
-    "Soporte técnico multicanal",
-    "Latencia ultra baja para gaming",
-    "App móvil para gestionar tu cuenta",
+    "Equipos de telecomunicaciones de última generación",
+    "Cobertura en múltiples zonas de servicio",
+    "Instalación profesional y rápida",
+    "Soporte técnico disponible 24/7",
+    "Servicio personalizado y atención al cliente",
+    "Soluciones integrales para hogares y empresas",
+    "Tecnología confiable y de alta disponibilidad",
+    "Intermediación especializada en telecomunicaciones",
 ]
 
 export function FeaturesSection() {
     return (
-        <section className="py-20 md:py-32">
+        <section id="nosotros" className="py-20 md:py-32">
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* Content */}
                     <div>
+                        <div className="mb-4 bg-primary/10 border border-primary rounded-full font-semibold text-primary px-4 py-1 text-xs uppercase max-w-max">
+                            <span>Sobre Nosotros</span>
+                        </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance leading-tight">
-                            Diseñado para la velocidad
+                            Por qué confiar en Wavenet
                         </h2>
                         <p className="text-lg text-foreground/60 mb-10 leading-relaxed">
-                            Ofrecemos la experiencia de internet más confiable con tecnología de punta, respaldada por un equipo
-                            humano excepcional.
+                            Con años de experiencia en el sector de telecomunicaciones, Wavenet se destaca por ofrecer servicios de calidad, respaldados por un equipo profesional y comprometido con tu satisfacción.
                         </p>
 
                         {/* Features Grid */}
                         <div className="grid sm:grid-cols-2 gap-4">
                             {features.map((feature, index) => (
                                 <div key={index} className="flex items-start gap-3">
-                                    <div className="p-1 bg-primary/10 rounded-full mt-1 flex-shrink-0">
+                                    <div className="p-1 bg-primary/10 rounded-full mt-1 shrink-0">
                                         <Check className="h-4 w-4 text-primary" />
                                     </div>
                                     <span className="text-foreground/80">{feature}</span>
                                 </div>
                             ))}
                         </div>
+                        <Button
+                            size="lg"
+                            asChild
+                        >
+                            <Link className="mt-8" href='https://wa.link/96bcbu' target="_blank">
+                                Contactar
+                                <ArrowRight className="size-4" />
+                            </Link>
+                        </Button>
                     </div>
 
                     {/* Image */}

@@ -1,31 +1,31 @@
-import { DeliveryBox01Icon, Satellite01Icon, Tv01Icon } from "hugeicons-react"
-import { Wifi, Globe, Headphones } from "lucide-react"
+import { Satellite01Icon, TelephoneIcon, Tv01Icon } from "hugeicons-react"
+import { Wifi, Headphones } from "lucide-react"
 
 const services = [
     {
         icon: Wifi,
-        title: "Internet Residencial",
-        description: "Conexión de fibra óptica con las mejores velocidades para tu hogar.",
-    },
-    {
-        icon: Satellite01Icon,
-        title: "Internet y Televisión Satelital",
-        description: "Soluciones integrales para zonas rurales y de difícil acceso.",
+        title: "Internet de Alta Velocidad",
+        description: "Conexión de fibra óptica y tecnología avanzada para tu hogar y negocio con velocidades ultra rápidas.",
     },
     {
         icon: Tv01Icon,
-        title: "Televisión por cable",
-        description: "Amplia variedad de canales HD y contenido on-demand para toda la familia.",
+        title: "Televisión por Cable",
+        description: "Amplio catálogo de canales en HD con excelente calidad de transmisión y programación variada.",
     },
     {
-        icon: DeliveryBox01Icon,
-        title: "Importación de Equipos",
-        description: "Traemos los mejores dispositivos de telecomunicaciones a precios competitivos.",
+        icon: Satellite01Icon,
+        title: "Internet Satelital",
+        description: "Conectividad por satélite para zonas sin cobertura terrestre, disponible en todo el territorio.",
     },
     {
-        icon: Globe,
+        icon: TelephoneIcon,
         title: "Telefonía",
-        description: "Llamadas ilimitadas con calidad HD y tarifas competitivas.",
+        description: "Servicio de telefonía digital con calidad HD, tarifas competitivas y llamadas ilimitadas",
+    },
+    {
+        icon: Tv01Icon,
+        title: "Televisión Web  ",
+        description: "Acceso a contenido digital en línea con transmisión en tiempo real y bajo demanda.",
     },
     {
         icon: Headphones,
@@ -38,15 +38,18 @@ export function ServicesSection() {
     return (
         <section id="servicios" className="py-20 md:py-32 border-t border-border/50">
             <div className="container mx-auto px-4">
+                <div className="mb-4 bg-primary/10 border border-primary rounded-full font-semibold text-primary px-4 py-1 text-xs uppercase max-w-max">
+                    <span>Solo lo mejor</span>
+                </div>
                 <div className="mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Lo que ofrecemos</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Nuestros servicios</h2>
                     <p className="text-lg text-foreground/60 max-w-2xl">
-                        Soluciones de conectividad completas diseñadas para mantener tu hogar y negocio siempre en línea.
+                        Wavenet ofrece soluciones de telecomunicaciones completas y especializadas para mantener tu hogar y negocio siempre conectados.
                     </p>
                 </div>
 
                 {/* Grid Services */}
-                <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                     {services.map((service, index) => (
                         <div key={index} className="flex gap-6">
                             <div className="p-3 bg-primary/10 rounded-xl h-fit">

@@ -8,6 +8,7 @@ import { CoverageSection } from "@/components/coverage-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { WhatsappButton } from "@/components/whatsapp-button"
+import { ComparisonSection } from "@/components/comparasion-section"
 
 export default function Home() {
     return (
@@ -17,9 +18,10 @@ export default function Home() {
             <HeroSection />
             <ServicesSection />
             <FeaturesSection />
+            <ComparisonSection/>
+            <CoverageSection />
             {/* <PlansSection /> */}
             {/* <TestimonialsSection /> */}
-            <CoverageSection />
             {/* <ContactSection /> */}
             <Footer />
         </main>
