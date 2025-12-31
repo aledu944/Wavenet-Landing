@@ -10,7 +10,11 @@ export const metadata: Metadata = {
     description:
         "Servicios de telecomunicaciones de alta velocidad. Internet fibra óptica, telefonía y soluciones empresariales para conectarte con el mundo.",
     keywords: "internet, fibra óptica, telecomunicaciones, wifi, conectividad, wavenet",
-    generator: 'v0.app'
+    openGraph: {
+        title: "Wavenet - Conectándote al Mundo",
+        description:
+            "Servicios de telecomunicaciones de alta velocidad. Internet fibra óptica, telefonía y soluciones empresariales para conectarte con el mundo.",
+    }
 }
 
 export default function RootLayout({
