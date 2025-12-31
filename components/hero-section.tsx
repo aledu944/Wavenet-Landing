@@ -1,8 +1,33 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Zap, Shield } from "lucide-react"
+'use client';
+
 import Link from 'next/link';
+import { Button } from "@/components/ui/button"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { ArrowRight, Zap, Shield } from "lucide-react"
 
 export function HeroSection() {
+    useScrollReveal('.hero-image', {
+        origin: 'right',
+        distance: '60px',
+        duration: 2000,
+        delay: 200,
+        easing: 'ease-in-out',
+    });
+
+    useScrollReveal('.hero-content', {
+        origin: 'left',
+        distance: '60px',
+        duration: 2000,
+        delay: 200
+    });
+
+    useScrollReveal('.hero-cards', {
+        origin: 'bottom',
+        distance: '60px',
+        duration: 2000,
+        delay: 600
+    });
+    
     return (
         <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-32 inset-0 bg-linear-to-br from-primary/5 via-secondary/5 to-accent/5">
             {/* Background Pattern */}
@@ -13,7 +38,7 @@ export function HeroSection() {
             <div className="container mx-auto px-4 z-50">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
-                    <div className="text-center lg:text-left max-w-3xl">
+                    <div className="hero-content text-center lg:text-left max-w-3xl">
                         <p className="text-sm font-medium text-primary mb-4">BIENVENIDO A WAVENET</p>
 
                         <h1 className="text-4xl uppercase md:text-6xl lg:text-7xl font-extrabold text-foreground mb-6 lg:leading-18 text-balance">
@@ -45,18 +70,20 @@ export function HeroSection() {
                                 <p className="text-sm text-foreground/60 mt-1">Clientes Satisfechos</p>
                             </div>
                             <div>
-                                <p className="text-3xl md:text-4xl font-bold text-secondary">99.9%</p>
+                                <p className="text-3xl md:text-4xl font-bold text-secondary">100%</p>
                                 <p className="text-sm text-foreground/60 mt-1">Disponibilidad</p>
                             </div>
                             <div>
-                                <p className="text-3xl md:text-4xl font-bold text-accent">100%</p>
-                                <p className="text-sm text-foreground/60 mt-1">Clientes felices</p>
+                                <p className="text-3xl md:text-4xl font-bold text-accent">+10</p>
+                                <p className="text-sm text-foreground/60 mt-1">
+                                    Servicios Garantizados
+                                </p>
                             </div>
                         </div>
                     </div>
 
                     {/* Hero Image */}
-                    <div className="relative ">
+                    <div className="relative hero-image">
                         <div className="relative rounded-3xl md:p-12">
                             <div className="relative bg-linear-to-br from-primary/50 via-secondary/70 to-accent/70 rounded-3xl p-2 overflow-hidden lg:max-w-max shadow-lg">
                                 <img
@@ -67,7 +94,7 @@ export function HeroSection() {
                             </div>
 
                             {/* Floating Cards */}
-                            <div className="absolute -left-4 top-5 lg:top-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
+                            <div className="absolute hero-cards -left-4 top-5 lg:top-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
                                 <div className="flex items-center gap-3">
                                     <div className="p-2 bg-primary/10 rounded-lg">
                                         <Zap className="h-5 w-5 text-primary" />
@@ -79,7 +106,7 @@ export function HeroSection() {
                                 </div>
                             </div>
 
-                            <div className="absolute -right-2 bottom-4 lg:-right-4 lg:bottom-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
+                            <div className="absolute hero-cards -right-2 bottom-4 lg:-right-4 lg:bottom-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
                                 <div className="flex items-center gap-3">
                                     <div className="p-2 bg-accent/10 rounded-lg">
                                         <Shield className="h-5 w-5 text-accent" />

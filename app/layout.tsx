@@ -1,9 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Figtree } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const figtree = Figtree({ subsets: ["latin"], weight: ['300', '400', '500', '600', '700', '800', '900'], variable: '--font-figtree' })
 
 export const metadata: Metadata = {
     title: "Wavenet - Conectándote al Mundo",
@@ -19,8 +19,8 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html className="scroll-smooth" lang="es" suppressHydrationWarning>
-            <body className={`antialiased`}>
+        <html className="scroll-smooth duration-700 " lang="es" suppressHydrationWarning>
+            <body className={`antialiased overflow-x-hidden ${figtree.className}`}>
                 {children}
             </body>
         </html>

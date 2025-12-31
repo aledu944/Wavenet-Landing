@@ -1,6 +1,9 @@
-import { CheckCircle, Zap, Shield, Satellite, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+'use client';
 import Link from "next/link"
+
+import { Button } from "@/components/ui/button"
+import { CheckCircle, Zap, Shield, Satellite, ArrowRight } from "lucide-react"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const coverageAreas = [
     "Sud Yungas",
@@ -11,12 +14,27 @@ const coverageAreas = [
 ]
 
 export function CoverageSection() {
+
+    useScrollReveal('.coverage-header', {
+        origin: 'bottom',
+        distance: '60px',
+        duration: 2000,
+        delay: 200
+    });
+
+    useScrollReveal('.coverage-image', {
+        origin: 'right',
+        distance: '60px',
+        duration: 2000,
+        delay: 200
+    });
+
     return (
         <section id="cobertura" className="py-20 md:py-32 border-t border-border/50 bg-muted/30">
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
-                    <div>
+                    <div className="coverage-header">
                         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
                             Verifica cobertura en tu zona
                         </h2>
@@ -50,9 +68,9 @@ export function CoverageSection() {
                     </div>
 
                     {/* Map Image */}
-                    <div className="relative items-center justify-center flex">
+                    <div className="coverage-image relative items-center justify-center flex">
 
-                        <div className="absolute -left-4 top-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
+                        <div className="absolute -left-4 top-3/5 lg:top-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
                             <div className="flex items-center gap-3">
                                 <div className="p-2 bg-primary/10 rounded-lg">
                                     <Zap className="h-5 w-5 text-primary" />
@@ -76,7 +94,7 @@ export function CoverageSection() {
                             </div>
                         </div>
 
-                        <div className="absolute -right-4 bottom-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
+                        <div className="absolute -right-4 -bottom-7 lg:bottom-1/4 bg-card p-4 rounded-xl shadow-lg border border-border">
                             <div className="flex items-center gap-3">
                                 <div className="p-2 bg-accent/10 rounded-lg">
                                     <Shield className="h-5 w-5 text-accent" />

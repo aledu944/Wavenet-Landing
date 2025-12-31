@@ -10,6 +10,7 @@ const navLinks = [
     { href: "#inicio", label: "Inicio" },
     { href: "#servicios", label: "Servicios" },
     { href: "#nosotros", label: "Nosotros" },
+    { href: "#caracteristicas", label: "Caracteristicas" },
     { href: "#cobertura", label: "Cobertura" },
 ]
 
@@ -57,7 +58,7 @@ export function Header() {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <nav className="lg:hidden py-4 border-t border-border">
+                    <nav className="lg:hidden transition-all py-4 border-t border-border">
                         <div className="flex flex-col gap-3">
                             {navLinks.map((link) => (
                                 <Link
