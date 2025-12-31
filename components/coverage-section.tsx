@@ -36,25 +36,12 @@ export function CoverageSection() {
                             </Button>
                         </div>
 
-                        {/* Coverage Check Form */}
-                        {/* <div className="flex gap-3 mb-10">
-                            <div className="relative flex-1">
-                                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-foreground/40" />
-                                <Input
-                                    placeholder="Tu dirección o código postal"
-                                    className="pl-10 h-12 bg-background border-border/50"
-                                />
-                            </div>
-                            <Button className="h-12 px-6 bg-primary hover:bg-primary/90 text-primary-foreground">Verificar</Button>
-                        </div> */}
-
-                        {/* Coverage Areas */}
                         <div>
                             <p className="font-semibold text-foreground mb-4">Zonas con cobertura activa:</p>
                             <div className="grid grid-cols-2 gap-3">
                                 {coverageAreas.map((area, index) => (
                                     <div key={index} className="flex items-center gap-2">
-                                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                                        <CheckCircle className="h-4 w-4 text-primary shrink-0" />
                                         <span className="text-sm text-foreground/80">{area}</span>
                                     </div>
                                 ))}
